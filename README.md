@@ -3,62 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empréstimos Online</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Emprestar Dinheiro a Juros</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+        .form-container {
+            margin: 20px;
+            padding: 20px;
+            background-color: #444;
+            border-radius: 8px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            background-color: #222;
+            color: white;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .button-blue {
+            background-color: #007BFF;
+            color: white;
+        }
+        .button-green {
+            background-color: #28a745;
+            color: white;
+        }
+        .chat-container {
+            margin-top: 30px;
+            background-color: #555;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .chat-box {
+            width: 100%;
+            height: 150px;
+            background-color: #222;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            resize: none;
+        }
+        .chat-input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            background-color: #222;
+            color: white;
+        }
+        .chat-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#servicos">Empréstimos</a></li>
-                <li><a href="#agendamento">Agendar</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <h1>Emprestar Dinheiro a Juros</h1>
+</header>
 
-    <!-- Seção de Empréstimos -->
-    <section id="servicos">
-        <h1>Empréstimos Rápidos</h1>
-        <p>Solicite seu empréstimo online de forma simples e segura.</p>
-        <button class="btn" id="btnSolicitar">Solicitar Empréstimo</button>
-    </section>
+<div class="form-container">
+    <h2>Formulário de Empréstimo</h2>
+    <form>
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" name="nome" required>
 
-    <!-- Formulário de Agendamento -->
-    <section id="agendamento">
-        <h2>Agende uma Consultoria</h2>
-        <form id="formAgendamento">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
+        <label for="valor">Valor do Empréstimo (R$)</label>
+        <input type="number" id="valor" name="valor" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <label for="taxa">Taxa de Juros (%)</label>
+        <input type="number" id="taxa" name="taxa" required>
 
-            <label for="data">Data do Agendamento:</label>
-            <input type="date" id="data" name="data" required>
+        <label for="prazo">Prazo (meses)</label>
+        <input type="number" id="prazo" name="prazo" required>
 
-            <button type="submit">Agendar</button>
-        </form>
-    </section>
+        <button type="submit" class="button-blue">Solicitar Empréstimo</button>
+        <button type="reset" class="button-green">Limpar Formulário</button>
+    </form>
+</div>
 
-    <!-- Chat -->
-    <section id="chat">
-        <div id="chat-box">
-            <h3>Atendimento Online</h3>
-            <div id="chat-messages"></div>
-            <input type="text" id="chat-input" placeholder="Digite sua mensagem...">
-            <button onclick="enviarMensagem()">Enviar</button>
-        </div>
-    </section>
+<div class="chat-container">
+    <h2>Chat</h2>
+    <textarea class="chat-box" readonly></textarea>
+    <input type="text" class="chat-input" placeholder="Digite sua mensagem...">
+    <button class="chat-button">Enviar</button>
+</div>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 Empréstimos Online | Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
