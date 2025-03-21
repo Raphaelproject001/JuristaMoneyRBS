@@ -3,66 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empréstimos Jurídicos</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Empréstimos Online</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header -->
+
+    <!-- Cabeçalho -->
     <header>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Simular Empréstimo</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#servicos">Empréstimos</a></li>
+                <li><a href="#agendamento">Agendar</a></li>
+                <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Seção Principal -->
-    <section class="main-section">
-        <h1>Empréstimos Jurídicos Facilitados</h1>
-        <p>Obtenha o financiamento que você precisa para dar continuidade aos seus processos jurídicos.</p>
-        <button onclick="window.location.href='simulacao.html'">Simule seu Empréstimo</button>
+    <!-- Seção de Empréstimos -->
+    <section id="servicos">
+        <h1>Empréstimos Rápidos</h1>
+        <p>Solicite seu empréstimo online de forma simples e segura.</p>
+        <button class="btn" id="btnSolicitar">Solicitar Empréstimo</button>
     </section>
 
-    <!-- Footer -->
+    <!-- Formulário de Agendamento -->
+    <section id="agendamento">
+        <h2>Agende uma Consultoria</h2>
+        <form id="formAgendamento">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="data">Data do Agendamento:</label>
+            <input type="date" id="data" name="data" required>
+
+            <button type="submit">Agendar</button>
+        </form>
+    </section>
+
+    <!-- Chat -->
+    <section id="chat">
+        <div id="chat-box">
+            <h3>Atendimento Online</h3>
+            <div id="chat-messages"></div>
+            <input type="text" id="chat-input" placeholder="Digite sua mensagem...">
+            <button onclick="enviarMensagem()">Enviar</button>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2025 Empréstimos Jurídicos. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Empréstimos Online | Todos os direitos reservados.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-/* Resetando margens e padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Corpo do documento */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-/* Header */
-header {
-    background-color: #003366;
-    padding: 20px;
-}
-
-header nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-start;
-}
-
-header nav ul li {
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration
